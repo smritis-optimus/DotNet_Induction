@@ -1,0 +1,1 @@
+﻿variable _age is defined protected but to access its properties must be made public
