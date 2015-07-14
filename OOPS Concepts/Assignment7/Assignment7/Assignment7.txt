@@ -1,0 +1,9 @@
+﻿Assignment 7:Code Output
+currInterestRate is assigned intially as 0.04
+three objects are created s1,s2 and s3
+the constructor sets  currBalance of s1=50
+the constructor sets  currBalance of s1=100
+when GetInterestRateObj() is called it takes currInterestRate as 0.04 
+when SetInterestRateObj(0.08) is called currInterestRate is set to 0.08 followed by GetInterestRateObj():now currInterestRate is 0.08
+when SavingAccount.GetInterestRate() is called currInterest is 0.08
+OUTPUT: (c):0.04,0.08,0.08
