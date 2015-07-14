@@ -12,9 +12,12 @@ namespace Assignment2
             switch (lang)
             {
 
-                case ("VB"): Console.WriteLine("VB.NET:OOP,multithreaded & more!"); break;
-                case ("C#"): Console.WriteLine("C# is a fine language"); break;
-                default: Console.WriteLine("Well....Good luck with that!"); break;
+                case ("VB"): Console.WriteLine("VB.NET:OOP,multithreaded & more!"); 
+                    break;
+                case ("C#"): Console.WriteLine("C# is a fine language"); 
+                    break;
+                default: Console.WriteLine("Well....Good luck with that!"); 
+                    break;
             }
             Console.Read();
         }
