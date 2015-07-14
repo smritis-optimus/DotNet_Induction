@@ -6,12 +6,12 @@ namespace Assignment5
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(string.Join(" ", getStringArray()));
+            Console.WriteLine(string.Join(" ", GetStringArray()));
             Console.Read();
         }
 
 
-        public static String[] getStringArray()
+        public static String[] GetStringArray()
         {
             string[] array = new string[6];
             array[0] = "This";
