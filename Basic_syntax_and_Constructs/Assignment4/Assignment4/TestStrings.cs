@@ -6,11 +6,11 @@ namespace Assignment4
     {
         static void Main(string[] args)
         {
-            String str1, str2,newstr;
+            String str1, str2, newstr;
             Console.WriteLine("Enter first String");
-            str1= Console.ReadLine();
+            str1 = Console.ReadLine();
             Console.WriteLine("Enter second String");
-            str2=Console.ReadLine();
+            str2 = Console.ReadLine();
 
             //Checking if string is null
             if (string.IsNullOrEmpty(str1))
@@ -48,7 +48,7 @@ namespace Assignment4
             {
                 Console.WriteLine(str1 + " and " + str2 + " are not equal.");
             }
-      
+
 
             //string contains another string
             if (str1.Contains(str2) == true)
@@ -62,33 +62,31 @@ namespace Assignment4
 
             //copy contents of one string to another
             newstr = string.Copy(str1);
-             Console.WriteLine(newstr); 
+            Console.WriteLine(newstr);
 
             //string ends with particular word
-             if (str1.EndsWith("array") == true)
-             {
-                 Console.WriteLine("The String EndsWith 'array': ");
-             }
-             else
-             {
-                 Console.WriteLine("The String does not EndsWith 'array':");
-             }
+            if (str1.EndsWith("array") == true)
+            {
+                Console.WriteLine("The String EndsWith 'array': ");
+            }
+            else
+            {
+                Console.WriteLine("The String does not EndsWith 'array':");
+            }
 
 
             //index of a substring in a string
-             Console.WriteLine("Using IndexOf:");
-             Console.WriteLine(str1.IndexOf("array").ToString()); 
+            Console.WriteLine("Using IndexOf:");
+            Console.WriteLine(str1.IndexOf("array").ToString());
 
             //to extract a substring froma string
-             Console.WriteLine("Finding substring:");
-             newstr = str1.Substring(1, 5);
-             Console.WriteLine(newstr); 
-
-
+            Console.WriteLine("Finding substring:");
+            newstr = str1.Substring(1, 5);
+            Console.WriteLine(newstr);
             Console.Read();
         }
-      
+
 
     }
-    }
+}
 
