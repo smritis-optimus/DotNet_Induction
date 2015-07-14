@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment8
 {
@@ -10,6 +6,23 @@ namespace Assignment8
     {
         private string name, course;
         private int enroll, age;
+        public void set_name(string value)
+        {
+          name = value;
+        }
+        public void set_course(string value)
+        {
+         course = value;
+        }
+        public void set_enroll(int value)
+        {
+        enroll = value;
+        }
+        public void set_name(int value)
+        {
+         age = value;
+        }
+
         enum attr
         {
             name, enroll, age, course
