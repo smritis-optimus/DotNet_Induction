@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment3
 {
@@ -22,6 +18,7 @@ namespace Assignment3
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Enum \n");
             Console.WriteLine(WeekDays.Sunday);
             Console.WriteLine(WeekDays.Monday);
             Console.WriteLine(WeekDays.Tuesday);
