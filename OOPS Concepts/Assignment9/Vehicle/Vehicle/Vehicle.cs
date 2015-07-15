@@ -4,52 +4,52 @@ namespace Vehicle
 {
    public class Vehicle
     {
-        public string make, model;
-        public int yearOfManufacture;
-        public float speed;
+        public string Make, Model;
+        public int YearOfManufacture;
+        public float Speed;
         public Vehicle(string m, string o, int y, float s)
         {
-            make = m;
-            model = o;
-            yearOfManufacture = y;
-            speed = s;
+            Make = m;
+            Model = o;
+            YearOfManufacture = y;
+            Speed = s;
         }
         public void Accelerate()
         {
-            speed = speed + 10;
-            Console.WriteLine("{0} Accelerated to: {1}", make, speed);
+            Speed = Speed + 10;
+            Console.WriteLine("{0} Accelerated to: {1}", Make, Speed);
         }
         public void Deaccelerate()
         {
-            speed = speed - 10;
-            Console.WriteLine("{0} Deccelerated to: {1}", make, speed);
+            Speed = Speed - 10;
+            Console.WriteLine("{0} Deccelerated to: {1}", Make, Speed);
         }
 
         public void Stop()
         {
-            speed = 0;
-            Console.WriteLine("{0} stopped", make);
+            Speed = 0;
+            Console.WriteLine("{0} stopped", Make);
         }
-        public Boolean isMoving()
+        public Boolean IsMoving()
         {
-            if (speed != 0)
+            if (Speed != 0)
                 return true;
             else
                 return false;
         }
-        public void display()
+        public void Display()
         {
-            Console.WriteLine("\nVehicle : {0}", make);
-            Console.WriteLine("\nModel : {0}", model);
-            Console.WriteLine("\nManufactured in : {0}", yearOfManufacture);
-            Console.WriteLine("\nSpeed : {0}", speed);
+            Console.WriteLine("\nVehicle : {0}", Make);
+            Console.WriteLine("\nModel : {0}", Model);
+            Console.WriteLine("\nManufactured in : {0}", YearOfManufacture);
+            Console.WriteLine("\nSpeed : {0}", Speed);
         
         }
     }
     public class Bicycle : Vehicle
     {
 
-        public void accomodation()
+        public void Accomodation()
         {
             Console.WriteLine("For 1 person Only");
         }
@@ -57,11 +57,9 @@ namespace Vehicle
             : base(m, o, y, s)
         { }
         public static void Main(string[] args)
-        {
-            int ch = 1;
+        { int _ch = 1;
             Bicycle b1 = new Bicycle("bicycle", "101", 2012, 15);
-
-            while (ch != 7)
+             while (_ch != 7)
             {
                 Console.WriteLine("\n.................");
                 Console.WriteLine("Options:\n");
@@ -73,8 +71,8 @@ namespace Vehicle
                 Console.WriteLine("6..Passengers");
                 Console.WriteLine("7.Exit");
                 Console.WriteLine("Enter your Choice");
-                ch = int.Parse(Console.ReadLine());
-                switch (ch)
+                _ch = int.Parse(Console.ReadLine());
+                switch (_ch)
                 {
                     case 1: b1.Accelerate();
                         break;
@@ -84,15 +82,15 @@ namespace Vehicle
                         break;
                     case 4:
                         {
-                            if (b1.isMoving() == true)
+                            if (b1.IsMoving() == true)
                                 Console.WriteLine("Moving");
                             else
                                 Console.WriteLine("Not Moving");
                         }
                         break;
-                    case 5: b1.display();
+                    case 5: b1.Display();
                         break;
-                    case 6: b1.accomodation();
+                    case 6: b1.Accomodation();
                         break;
                     case 7: Console.WriteLine("Exited");
                         break;
@@ -110,15 +108,15 @@ namespace Vehicle
         public Bike(string m, string o, int y, float s)
             : base(m, o, y, s)
         { }
-        public void accomodation()
+        public void Accomodation()
         {
             Console.WriteLine("For 2 persons");
         }
         public static void Main(string[] args)
         {
-            int ch = 1;
+            int _ch = 1;
             Bike b1 = new Bike("bike", "102", 2013, 60);
-            while (ch != 7)
+            while (_ch != 7)
             {
                 Console.WriteLine("\n.................");
                 Console.WriteLine("Options:\n");
@@ -130,8 +128,8 @@ namespace Vehicle
                 Console.WriteLine("6..Passengers");
                 Console.WriteLine("7.Exit");
                 Console.WriteLine("Enter your Choice");
-                ch = int.Parse(Console.ReadLine());
-                switch (ch)
+                _ch = int.Parse(Console.ReadLine());
+                switch (_ch)
                 {
                     case 1: b1.Accelerate();
                         break;
@@ -141,15 +139,15 @@ namespace Vehicle
                         break;
                     case 4:
                         {
-                            if (b1.isMoving() == true)
+                            if (b1.IsMoving() == true)
                                 Console.WriteLine("Moving");
                             else
                                 Console.WriteLine("Not Moving");
                         }
                         break;
-                    case 5: b1.display();
+                    case 5: b1.Display();
                         break;
-                    case 6: b1.accomodation();
+                    case 6: b1.Accomodation();
                         break;
                     case 7: Console.WriteLine("Exited");
                         break;
@@ -167,9 +165,9 @@ namespace Vehicle
         public Car(string m, string o, int y, float s)
             : base(m, o, y, s)
         { }
-        public void isRacing()
+        public void IsRacing()
         {
-            if (speed > 70)
+            if (Speed > 70)
                 Console.WriteLine("Racing Car");
             else
                 Console.WriteLine("Not RacingCar");
@@ -201,15 +199,15 @@ namespace Vehicle
                         break;
                     case 4:
                         {
-                            if (c1.isMoving() == true)
+                            if (c1.IsMoving() == true)
                                 Console.WriteLine("Moving");
                             else
                                 Console.WriteLine("Not Moving");
                         }
                         break;
-                    case 5: c1.display();
+                    case 5: c1.Display();
                         break;
-                    case 6: c1.isRacing();
+                    case 6: c1.IsRacing();
                         break;
                     case 7: Console.WriteLine("Exited");
                         break;
@@ -223,11 +221,11 @@ namespace Vehicle
     }
     public class Truck : Vehicle
     {
-        int num = 10;
+        private int _num = 10;
         public Truck(string m, string o, int y, float s)
             : base(m, o, y, s)
         { }
-        public void goods()
+        public void Goods()
         {
             Console.WriteLine("Goods taken on a day : {0}", num);
         }
@@ -258,15 +256,15 @@ namespace Vehicle
                         break;
                     case 4:
                         {
-                            if (t1.isMoving() == true)
+                            if (t1.IsMoving() == true)
                                 Console.WriteLine("Moving");
                             else
                                 Console.WriteLine("Not Moving");
                         }
                         break;
-                    case 5: t1.display();
+                    case 5: t1.Display();
                         break;
-                    case 6: t1.goods();
+                    case 6: t1.Goods();
                         break;
                     case 7: Console.WriteLine("Exited");
                         break;
