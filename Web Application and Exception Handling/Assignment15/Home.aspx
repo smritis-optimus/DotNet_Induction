@@ -4,8 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <p>
-        <asp:Label ID="lb1" runat="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium"></asp:Label></p>
+  
     <p style="box-sizing: border-box; margin: 1.5em 0px 8px; padding: 0px; border: 0px rgb(225, 225, 225); font-family: 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 600; font-stretch: inherit; line-height: 1.1em; vertical-align: baseline; color: rgb(251, 0, 0); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><strong style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px rgb(225, 225, 225); font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-stretch: inherit; line-height: inherit; vertical-align: baseline; color: inherit;">
         About Us</p>
     <p style="box-sizing: border-box; margin: 0.85em 0px; padding: 0px; border: 0px rgb(225, 225, 225); font-family: 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: inherit; line-height: 23.1000003814697px; vertical-align: baseline; color: rgb(102, 102, 102); letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">

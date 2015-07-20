@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-      <p>
-        <asp:Label ID="lb1" runat="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium"></asp:Label></p>
+   
       <img alt="location" src="Image/office.png" /><br />
     <p style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 22.3999996185303px; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
         New Delhi Office<br />

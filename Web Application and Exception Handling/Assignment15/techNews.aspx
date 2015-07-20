@@ -13,8 +13,7 @@
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-      <p>
-        <asp:Label ID="lb1" runat="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium"></asp:Label></p>
+      
     <h1 class="title" style="font-family: sans-serif; font-size: 38px; font-weight: bold; text-decoration: none; margin: 10px 0px 5px; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">Gadget Ogling: An Amped-Up Smartphone, a Giant USB Charger and a Gun Detector</h1>
 <p class="title" style="font-family: sans-serif; font-size: 38px; font-weight: bold; text-decoration: none; margin: 10px 0px 5px; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
     <img alt="USB charger" class="auto-style9" src="Image/xl-2015-marshall-london-phone-1.jpg" /></p>

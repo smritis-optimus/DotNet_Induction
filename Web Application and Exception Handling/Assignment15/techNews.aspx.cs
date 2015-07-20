@@ -10,6 +10,6 @@ public partial class techNewsaspx : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        lb1.Text = "WELCOME : " + Session["username"];
+        
     }
 }

@@ -12,36 +12,43 @@
             width: 196px;
             height: 74px;
         }
+
         .auto-style2 {
             width: 46px;
             height: 31px;
             border-width: 0px;
         }
+
         .auto-style3 {
             width: 40px;
             height: 32px;
             border-width: 0px;
         }
+
         .auto-style4 {
             width: 42px;
             height: 29px;
             border-width: 0px;
         }
+
         .auto-style5 {
             width: 49px;
             height: 27px;
             border-width: 0px;
         }
+
         .auto-style6 {
             width: 35px;
             height: 29px;
             border-width: 0px;
         }
+
         .auto-style7 {
             width: 36px;
             height: 30px;
             border-width: 0px;
         }
+
         .auto-style8 {
             width: 36px;
             height: 31px;
@@ -51,7 +58,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+ 
         <div style="height: 28px; font-family: 'Arial Black'; width: 100%;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://www.facebook.com/OptimusInformation">
@@ -70,6 +77,8 @@
         <a href="contactUs.aspx"> <asp:Label ID="Label5" runat="server" BackColor="Silver" Font-Size="X-Large" Text="Contact Us" style="color: #000000"></asp:Label></a>
 &nbsp;<br />
           <hr style="width: 932px" />
+          <div>
+        <asp:Label ID="lbl1" runat ="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium"/>        </div>
       <div style="font-family: Aharoni";> <asp:Button ID="logout" runat="server" BackColor="#990000" BorderStyle="Ridge" Font-Size="Medium" Text="Logout" OnClick="logout_Click" style="margin-left: 1110px" Height="30px" ForeColor="White" /></div>
     
 
