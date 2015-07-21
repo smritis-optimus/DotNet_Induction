@@ -1,2 +1,0 @@
-﻿variable _age is defined protected which means it is only accessible to derived type or members of same type.To access its 
-properties must be made public.

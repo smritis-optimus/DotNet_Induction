@@ -1,4 +1,0 @@
-﻿->The student class has no namespace mentioned.Also,by default its access specifier is internal.If assembly of uniPeople and student is 
-different it can't be accessed.
-->variable _age is defined protected which means it is only accessible to derived type or members of same type.To access its 
-properties must be made public.
