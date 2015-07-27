@@ -23,7 +23,7 @@
         <tr>
             
             <td>
-                <asp:ListBox ID="ltNames1" runat="server" SelectionMode="multiple" ></asp:ListBox>
+                <asp:ListBox ID="ltNames1" runat="server" ></asp:ListBox>
 
             </td>
             <td>
