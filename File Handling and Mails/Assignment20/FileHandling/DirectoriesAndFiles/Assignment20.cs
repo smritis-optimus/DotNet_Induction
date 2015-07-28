@@ -15,19 +15,15 @@ namespace DirectoriesAndFiles
             try
             {
                 //create a new directory
-
                 if (!Directory.Exists(directoryName))
                 {
                     DirectoryInfo di = Directory.CreateDirectory(directoryName);
                     Console.WriteLine("Directory created successfully\n ");
-
-
                 }
                 else
                     Console.WriteLine("That path exists already\n");
 
                 //creating two files in the directory
-
                 if (!File.Exists(fileRead))
                 {
                     using (FileStream fs = File.Create(fileRead))
@@ -49,7 +45,6 @@ namespace DirectoriesAndFiles
                 DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
 
                 //displaying attributes of c drive
-
                 if (dinfo.Exists)
                 {
                     Console.WriteLine("\n..............");
@@ -67,7 +62,6 @@ namespace DirectoriesAndFiles
                     Console.WriteLine("Path does not exists\n");
 
                 //displaying attibutes of created directory and its files
-
                 dinfo = new DirectoryInfo(directoryName);
                 if (dinfo.Exists)
                 {
@@ -85,14 +79,12 @@ namespace DirectoriesAndFiles
 
                 //displaying the full path of directory
                 Console.WriteLine("\nThe full path of {0} is {1}\n", directoryName, Path.GetFullPath(directoryName));
-
                 using (FileStream fWrite = new FileStream(fileRead, FileMode.OpenOrCreate, FileAccess.Write))
                 {
                     StreamWriter sw = new StreamWriter(fWrite);
                     sw.WriteLine("This is a simple text file");
                     sw.Flush();
                 }
-
 
                 //setting the control of FileRead to be Read Only
                 FileIOPermission fileIOPerm = new FileIOPermission(FileIOPermissionAccess.Read, fileRead);
@@ -108,7 +100,6 @@ namespace DirectoriesAndFiles
                 File.WriteAllText(fileWrite, content);
 
                 //Compress fileWrite using GZIP compression
-
                 byte[] byteArray = new byte[fileWrite.Length];
                 int indexBA = 0;
                 foreach (char item in fileWrite.ToCharArray())
@@ -116,16 +107,12 @@ namespace DirectoriesAndFiles
                     byteArray[indexBA++] = (byte)item;
                 }
                 byte[] compress = Compress(byteArray);//function calling to compress the file
-                File.WriteAllBytes(directoryName+"FileWriteZip.gz", compress);
+                File.WriteAllBytes(directoryName + "FileWriteZip.gz", compress);
             }
-
             catch (IOException e)
             {
                 Console.WriteLine("The process failed: {0}", e.ToString());
             }
-            finally { }
-            Console.Read();
-
         }
         public static byte[] Compress(byte[] raw)
         {
