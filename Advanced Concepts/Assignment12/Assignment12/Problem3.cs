@@ -6,7 +6,7 @@ namespace Assignment12
 {
     class VehicleCollection : IEnumerable<string>
     {
-        List<string> _elements;
+        private List<string> _elements;
 
         public VehicleCollection(string[] array)
         {
