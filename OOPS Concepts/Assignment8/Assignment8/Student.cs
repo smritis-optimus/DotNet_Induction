@@ -8,20 +8,20 @@ namespace Assignment8
         private int _enroll, _age;
         public void set_name(string value)
         {
-                _name = value;
-            
+            _name = value;
+
         }
         public void set_course(string value)
         {
-         _course = value;
+            _course = value;
         }
         public void set_enroll(int value)
         {
-        _enroll = value;
+            _enroll = value;
         }
         public void set_name(int value)
         {
-         _age = value;
+            _age = value;
         }
 
         enum Attr
