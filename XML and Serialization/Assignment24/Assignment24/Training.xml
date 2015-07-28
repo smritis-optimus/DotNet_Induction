@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<iCalibrator>
+  <Testing_Over />
+  <Training day="1">
+    <Chapter>XML-1</Chapter>
+    <Chapter>XML-2</Chapter>
+  </Training>
+</iCalibrator>
