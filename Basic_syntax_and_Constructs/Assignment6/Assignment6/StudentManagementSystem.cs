@@ -4,14 +4,14 @@ namespace Assignment6
 {
     class StudentManagementSystem
     {
-        string name;
-        int rollno;
-        float marks;
+        string _name;
+        int _rollno;
+        float _marks;
 
-        public void grade(float x)
+        public void CalculateGrade(float marks)
         {
             float avg;
-            avg = (x / 1000) * 100;
+            avg = (marks / 1000) * 100;
             if (avg >= 75)
                 Console.WriteLine("Distinction");
             else
@@ -26,11 +26,11 @@ namespace Assignment6
         }
 
 
-        public void record()
+        public void DisplayRecord()
         {
-            Console.WriteLine("Student Name : " + name);
-            Console.WriteLine("Student rollno : " + rollno);
-            grade(marks);
+            Console.WriteLine("Student Name : " + _name);
+            Console.WriteLine("Student rollno : " + _rollno);
+            CalculateGrade(_marks);
         }
 
         public static void Main(string[] args)
@@ -40,26 +40,26 @@ namespace Assignment6
             StudentManagementSystem s3 = new StudentManagementSystem();
             StudentManagementSystem s4 = new StudentManagementSystem();
             StudentManagementSystem s5 = new StudentManagementSystem();
-            s1.name = "Smriti";
-            s1.rollno = 49;
-            s1.marks = 820;
-            s1.record();
-            s2.name = "Arjun";
-            s2.rollno = 2;
-            s2.marks = 420;
-            s2.record();
-            s3.name = "Geeta";
-            s3.rollno = 29;
-            s3.marks = 910;
-            s3.record();
-            s4.name = "Rohit";
-            s4.rollno = 37;
-            s4.marks = 620;
-            s4.record();
-            s5.name = "Deepak";
-            s5.rollno = 19;
-            s5.marks = 700;
-            s5.record();
+            s1._name = "Smriti";
+            s1._rollno = 49;
+            s1._marks = 820;
+            s1.DisplayRecord();
+            s2._name = "Arjun";
+            s2._rollno = 2;
+            s2._marks = 420;
+            s2.DisplayRecord();
+            s3._name = "Geeta";
+            s3._rollno = 29;
+            s3._marks = 910;
+            s3.DisplayRecord();
+            s4._name = "Rohit";
+            s4._rollno = 37;
+            s4._marks = 620;
+            s4.DisplayRecord();
+            s5._name = "Deepak";
+            s5._rollno = 19;
+            s5._marks = 700;
+            s5.DisplayRecord();
             Console.Read();
         }
     }
