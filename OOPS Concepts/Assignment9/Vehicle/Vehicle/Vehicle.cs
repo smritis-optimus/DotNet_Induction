@@ -2,53 +2,52 @@
 
 namespace Vehicle
 {
-   public class Vehicle
+    public class Vehicle
     {
-        public string Make, Model;
-        public int YearOfManufacture;
-        public float Speed;
+        public string _vehicleName, _vehicleModel;
+        public int _yearOfManufacture;
+        public float _speedofVehicle;
         public Vehicle(string m, string o, int y, float s)
         {
-            Make = m;
-            Model = o;
-            YearOfManufacture = y;
-            Speed = s;
+            _vehicleName = m;
+            _vehicleModel = o;
+            _yearOfManufacture = y;
+            _speedofVehicle = s;
         }
         public void Accelerate()
         {
-            Speed = Speed + 10;
-            Console.WriteLine("{0} Accelerated to: {1}", Make, Speed);
+            _speedofVehicle = _speedofVehicle + 10;
+            Console.WriteLine("{0} Accelerated to: {1}", _vehicleName, _speedofVehicle);
         }
         public void Deaccelerate()
         {
-            Speed = Speed - 10;
-            Console.WriteLine("{0} Deccelerated to: {1}", Make, Speed);
+            _speedofVehicle = _speedofVehicle - 10;
+            Console.WriteLine("{0} Deccelerated to: {1}", _vehicleName, _speedofVehicle);
         }
 
         public void Stop()
         {
-            Speed = 0;
-            Console.WriteLine("{0} stopped", Make);
+            _speedofVehicle = 0;
+            Console.WriteLine("{0} stopped", _vehicleName);
         }
         public Boolean IsMoving()
         {
-            if (Speed != 0)
+            if (_speedofVehicle != 0)
                 return true;
             else
                 return false;
         }
         public void Display()
         {
-            Console.WriteLine("\nVehicle : {0}", Make);
-            Console.WriteLine("\nModel : {0}", Model);
-            Console.WriteLine("\nManufactured in : {0}", YearOfManufacture);
-            Console.WriteLine("\nSpeed : {0}", Speed);
-        
+            Console.WriteLine("\nVehicle : {0}", _vehicleName);
+            Console.WriteLine("\nModel : {0}", _vehicleModel);
+            Console.WriteLine("\nManufactured in : {0}", _yearOfManufacture);
+            Console.WriteLine("\nSpeed : {0}", _speedofVehicle);
+
         }
     }
     public class Bicycle : Vehicle
     {
-
         public void Accomodation()
         {
             Console.WriteLine("For 1 person Only");
@@ -57,9 +56,10 @@ namespace Vehicle
             : base(m, o, y, s)
         { }
         public static void Main(string[] args)
-        { int _ch = 1;
+        {
+            int _ch = 1;
             Bicycle b1 = new Bicycle("bicycle", "101", 2012, 15);
-             while (_ch != 7)
+            while (_ch != 7)
             {
                 Console.WriteLine("\n.................");
                 Console.WriteLine("Options:\n");
@@ -97,7 +97,7 @@ namespace Vehicle
                     default: Console.WriteLine("Incorrect option");
                         break;
                 }
-               
+
             }
 
             Console.Read();
@@ -167,7 +167,7 @@ namespace Vehicle
         { }
         public void IsRacing()
         {
-            if (Speed > 70)
+            if (_speedofVehicle > 70)
                 Console.WriteLine("Racing Car");
             else
                 Console.WriteLine("Not RacingCar");
