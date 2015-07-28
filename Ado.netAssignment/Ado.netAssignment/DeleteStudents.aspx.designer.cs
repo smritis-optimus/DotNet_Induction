@@ -31,13 +31,13 @@ namespace Ado.netAssignment {
         protected global::System.Web.UI.WebControls.DropDownList dlStream;
         
         /// <summary>
-        /// ltNames1 control.
+        /// SelectedStreamList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ltNames1;
+        protected global::System.Web.UI.WebControls.ListBox SelectedStreamList1;
         
         /// <summary>
         /// btnLeft control.
@@ -58,13 +58,13 @@ namespace Ado.netAssignment {
         protected global::System.Web.UI.WebControls.Button btnRight;
         
         /// <summary>
-        /// ltNames2 control.
+        /// SelectedStreamList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ltNames2;
+        protected global::System.Web.UI.WebControls.ListBox SelectedStreamList2;
         
         /// <summary>
         /// btnDelete control.

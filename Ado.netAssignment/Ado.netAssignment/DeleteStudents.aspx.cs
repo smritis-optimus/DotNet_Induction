@@ -54,7 +54,7 @@ namespace Ado.netAssignment
                 item = new ListItem();
                 item.Value = s.Id.ToString();
                 item.Text = s.Name;
-                ltNames1.Items.Add(item);
+                SelectedStreamList1.Items.Add(item);
             }
           
         }
@@ -62,24 +62,24 @@ namespace Ado.netAssignment
 
         protected void btnLeft_Click(object sender, EventArgs e)
         {
-            while (ltNames2.Items.Count != 0)
+            while (SelectedStreamList2.Items.Count != 0)
             {
-                for (int i = 0; i < ltNames2.Items.Count; i++)
+                for (int i = 0; i < SelectedStreamList2.Items.Count; i++)
                 {
-                    ltNames1.Items.Add(ltNames2.Items[i]);
-                    ltNames2.Items.Remove(ltNames2.Items[i]);
+                    SelectedStreamList1.Items.Add(SelectedStreamList2.Items[i]);
+                    SelectedStreamList2.Items.Remove(SelectedStreamList2.Items[i]);
                 }
             }
         }
 
         protected void btnRight_Click(object sender, EventArgs e)
         {
-            while (ltNames1.Items.Count != 0)
+            while (SelectedStreamList1.Items.Count != 0)
             {
-                for (int i = 0; i < ltNames1.Items.Count; i++)
+                for (int i = 0; i < SelectedStreamList1.Items.Count; i++)
                 {
-                    ltNames2.Items.Add(ltNames1.Items[i]);
-                    ltNames1.Items.Remove(ltNames1.Items[i]);
+                    SelectedStreamList2.Items.Add(SelectedStreamList1.Items[i]);
+                    SelectedStreamList1.Items.Remove(SelectedStreamList1.Items[i]);
                 }
             }
         }
@@ -87,13 +87,13 @@ namespace Ado.netAssignment
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             String selectedItem = "";
-             if (ltNames1.Items.Count > 0)
+            if (SelectedStreamList1.Items.Count > 0)
         {
-            for (int i = 0; i < ltNames1.Items.Count; i++)
+            for (int i = 0; i < SelectedStreamList1.Items.Count; i++)
             {
-                if (ltNames1.Items[i].Selected)
+                if (SelectedStreamList1.Items[i].Selected)
                 {
-                    selectedItem = selectedItem +ltNames1.Items[i].Value+",";
+                    selectedItem = selectedItem + SelectedStreamList1.Items[i].Value + ",";
                    
             }
         }

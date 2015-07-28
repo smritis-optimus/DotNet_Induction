@@ -3,7 +3,6 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Data;
-using System.Web.UI.WebControls;
 namespace Ado.netAssignment
 {
     public class Student
@@ -87,196 +86,188 @@ namespace Ado.netAssignment
             }
             catch (SqlException ex)
             {
-                
+
             }
         }
         public bool AddStudent()
         {
-
-            SqlConnection con = new SqlConnection(connection);
             try
             {
 
-                string query = "insert into Student values('" + Id + "','" + Name + "','" + Age + "',(select Name from Stream where Id='" + Convert.ToInt32(Stream) + "'),(select Name from State where Id='" + Convert.ToInt32(State) + "'))";
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-         
-                if (cmd.ExecuteNonQuery() > 0)
-                    return true;
-                else
-                    return false;
-              
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = "insert into Student values('" + Id + "','" + Name + "','" + Age + "',(select Name from Stream where Id='" + Convert.ToInt32(Stream) + "'),(select Name from State where Id='" + Convert.ToInt32(State) + "'))";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        con.Open();
+
+                        if (cmd.ExecuteNonQuery() > 0)
+                            return true;
+                        else
+                            return false;
+
+                    }
+                }
             }
             catch (SqlException ex)
             {
                 return false;
             }
-            finally
-            {
-                con.Close();
-            }
+
 
         }
         public bool UpdateStudents()
         {
-            SqlConnection con = new SqlConnection(connection);
             try
             {
-
-                string query = "update Student set Name='" + Name + "',Age='" + Age + "',Stream=(select Name from Stream where Id='" + Convert.ToInt32(Stream) + "'),State=(select Name from State where Id='" + Convert.ToInt32(State) + "')where Id='"+Id+"'";
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                if (cmd.ExecuteNonQuery() > 0)
-                    return true;
-                else
-                    return false;
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    string query = "update Student set Name='" + Name + "',Age='" + Age + "',Stream=(select Name from Stream where Id='" + Convert.ToInt32(Stream) + "'),State=(select Name from State where Id='" + Convert.ToInt32(State) + "')where Id='" + Id + "'";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        con.Open();
+                        if (cmd.ExecuteNonQuery() > 0)
+                            return true;
+                        else
+                            return false;
+                    }
+                }
             }
             catch (SqlException ex)
             {
                 return false;
             }
-            finally
-            {
-                con.Close();
-            }
+
         }
 
         public List<Student> GetAllStudents(int streamID)
         {
             List<Student> students = new List<Student>();
             Student s1;
-            SqlConnection con = new SqlConnection(connection);
             try
             {
-                string query = "Select Student.Id,Student.Name,Student.Age,Student.Stream,Student.State,Stream.Id from Student join Stream on Student.Stream=Stream.Name where Stream.Id='" + streamID+"'order by Name";
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                using (SqlConnection con = new SqlConnection(connection))
                 {
-                    s1 = new Student();
-                    s1.Id = Convert.ToInt32(dr["Id"]);
-                    s1.Name = dr["Name"].ToString();
-                    s1.Age = Convert.ToInt32(dr["Age"]);
-                    s1.Stream = dr["Stream"].ToString();
-                    s1.State = dr["State"].ToString();
-                    students.Add(s1);
+
+                    string query = "Select Student.Id,Student.Name,Student.Age,Student.Stream,Student.State,Stream.Id from Student join Stream on Student.Stream=Stream.Name where Stream.Id='" + streamID + "'order by Name";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        con.Open();
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            s1 = new Student();
+                            s1.Id = Convert.ToInt32(dr["Id"]);
+                            s1.Name = dr["Name"].ToString();
+                            s1.Age = Convert.ToInt32(dr["Age"]);
+                            s1.Stream = dr["Stream"].ToString();
+                            s1.State = dr["State"].ToString();
+                            students.Add(s1);
+                        }
+                        dr.Close();
+                        return students;
+                    }
                 }
-                dr.Close();
-                return students;
             }
             catch (SqlException ex)
             {
                 return null;
-            }
-            finally
-            {
-                con.Close();
-              
             }
         }
 
         public List<Student> GetAllStudents()
         {
-            
+
             List<Student> students = new List<Student>();
             Student s1;
-            SqlConnection con = new SqlConnection(connection);
             try
             {
-                string query = "Select * from Student order by Name";
-                SqlCommand cmd = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                using (SqlConnection con = new SqlConnection(connection))
                 {
-                    s1 = new Student();
-                    s1.Id = Convert.ToInt32(dr["Id"]);
-                    s1.Name = dr["Name"].ToString();
-                    s1.Age = Convert.ToInt32(dr["Age"]);
-                    s1.Stream = dr["Stream"].ToString();
-                    s1.State = dr["State"].ToString();
-                    students.Add(s1);
-                   
+                    string query = "Select * from Student order by Name";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        con.Open();
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        while (dr.Read())
+                        {
+                            s1 = new Student();
+                            s1.Id = Convert.ToInt32(dr["Id"]);
+                            s1.Name = dr["Name"].ToString();
+                            s1.Age = Convert.ToInt32(dr["Age"]);
+                            s1.Stream = dr["Stream"].ToString();
+                            s1.State = dr["State"].ToString();
+                            students.Add(s1);
+
+                        }
+
+                        dr.Close();
+                        return students;
+                    }
                 }
-               
-                dr.Close();
-                return students;
             }
             catch (SqlException ex)
             {
                 return null;
-            }
-            finally
-            {
-                con.Close();
-
             }
         }
         public Student GetStudent(int id)
         {
             Student student = null;
             string query = "select Id,Name,Age,Stream,State from Student where Id=" + id;
-            SqlConnection con = new SqlConnection(connection);
             try
-            { SqlCommand cmd = new SqlCommand(query, con);
-               con.Open();
-
-               SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+            {
+                using (SqlConnection con = new SqlConnection(connection))
                 {
-                    student = new Student();
-                    student.Id = Convert.ToInt32(dr["Id"]);
-                    student.Name =dr["Name"].ToString();
-                    student.Age = Convert.ToInt32(dr["Age"]);
-                    student.Stream = dr["Stream"].ToString();
-                    student.State = dr["State"].ToString();
-                    return student;
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        con.Open();
+
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            student = new Student();
+                            student.Id = Convert.ToInt32(dr["Id"]);
+                            student.Name = dr["Name"].ToString();
+                            student.Age = Convert.ToInt32(dr["Age"]);
+                            student.Stream = dr["Stream"].ToString();
+                            student.State = dr["State"].ToString();
+                            return student;
+                        }
+                        else
+                            return null;
+                    }
                 }
-                else
-                    return null;
             }
             catch (SqlException ex)
             {
                 return null;
             }
-            finally
-            {
-               con.Close();
-            }
         }
         public bool DeleteStudents(string id)
         {
-            List<int> numbers = new List<int>(Array.ConvertAll(id.Split(','), int.Parse));
-            string query="";
-            int count = 0;
-            SqlConnection con = new SqlConnection(connection);
+            string[] IdCollection = id.Split(',');
+            int RollNo = Convert.ToInt32(IdCollection[0]);
+            string query = "";
             try
             {
-                
-                con.Open();
-                foreach (int i in numbers)
+                using (SqlConnection con = new SqlConnection(connection))
                 {
-                    query = "delete from Student where Id in(" + i + ")";
+                    con.Open();
 
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.ExecuteNonQuery();
-                    count++;
+                    query = "delete from Student where Id in(" + RollNo + ")";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
                 }
-                if (count > 0)
-                    return true;
-                else
-                    return false;
             }
             catch (SqlException ex)
             {
                 return false;
             }
-            finally
-            {
-                con.Close();
-            }
-           
         }
     }
 }

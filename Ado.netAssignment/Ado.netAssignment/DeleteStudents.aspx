@@ -23,7 +23,7 @@
         <tr>
             
             <td>
-                <asp:ListBox ID="ltNames1" runat="server" ></asp:ListBox>
+                <asp:ListBox ID="SelectedStreamList1" runat="server" ></asp:ListBox>
 
             </td>
             <td>
@@ -31,7 +31,7 @@
                 <asp:Button ID="btnRight" runat="server" Text="Move Right" OnClick="btnRight_Click" />
             </td>
             <td>
-                <asp:ListBox ID="ltNames2" runat="server"></asp:ListBox>
+                <asp:ListBox ID="SelectedStreamList2" runat="server"></asp:ListBox>
             </td>
         </tr>
         <tr>
