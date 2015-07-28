@@ -1,4 +1,5 @@
 ﻿Assignment 7:Code Output
+
 currInterestRate is assigned intially as 0.04
 three objects are created s1,s2 and s3
 the constructor sets  currBalance of s1=50
