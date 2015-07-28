@@ -12,7 +12,7 @@ public partial class Login : System.Web.UI.Page
 
     }
 
-    protected void Button1_Click1(object sender, EventArgs e)
+    protected void btnLogin_Click(object sender, EventArgs e)
     {
         Session["username"] = username.Text;
         Response.Redirect("Home.aspx");

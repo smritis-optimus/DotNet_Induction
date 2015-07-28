@@ -161,7 +161,7 @@
 				 <asp:TextBox ID="username" runat="server" placeholder="username"></asp:TextBox>
 				<asp:TextBox ID="password" runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
             <br />  <br />
-				    <asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Button1_Click1" CssClass="button" />
+				    <asp:Button ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" CssClass="button" />
 		</div>
    
 

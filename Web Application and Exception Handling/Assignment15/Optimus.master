@@ -78,7 +78,7 @@
 &nbsp;<br />
           <hr style="width: 932px" />
           <div>
-        <asp:Label ID="lbl1" runat ="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium"/>        </div>
+        <asp:Label ID="lblUserName" runat ="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium"/>        </div>
       <div style="font-family: Aharoni";> <asp:Button ID="logout" runat="server" BackColor="#990000" BorderStyle="Ridge" Font-Size="Medium" Text="Logout" OnClick="logout_Click" style="margin-left: 1110px" Height="30px" ForeColor="White" /></div>
     
 
