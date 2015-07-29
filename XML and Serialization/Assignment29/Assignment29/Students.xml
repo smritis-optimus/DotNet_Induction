@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Students>
+  <Student name="Preeti" age="22">
+    <Stream>PCM</Stream>
+    <Address>
+      <City>Delhi</City>
+      <Country>India</Country>
+    </Address>
+    <College>Engineering</College>
+  </Student>
+  <Student name="Priya" age="24">
+    <Stream>PCB</Stream>
+    <Address>
+      <City>Mumbai</City>
+      <Country>India</Country>
+    </Address>
+  </Student>
+  <Student name="Anjali" age="25">
+    <Stream>Commerce</Stream>
+    <Address>
+      <City>Delhi</City>
+      <Country>India</Country>
+    </Address>
+  </Student>
+  <Student name="Mohan" age="24">
+    <Stream>PCM</Stream>
+    <Address>
+      <City>Chennai</City>
+      <Country>India</Country>
+    </Address>
+    <College>Engineering</College>
+  </Student>
+  <Student name="Shivam" age="22">
+    <Stream>PCM</Stream>
+    <Address>
+      <City>Delhi</City>
+      <Country>India</Country>
+    </Address>
+    <College>Engineering</College>
+  </Student>
+</Students>
