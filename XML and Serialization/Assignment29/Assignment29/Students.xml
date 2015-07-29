@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="Student.xslt"?>
+<Students>
+  <Student name="Preeti" age="22">
+    <Stream>PCM</Stream>
+    <Address>
+      <City>Delhi</City>
+      <Country>India</Country>
+    </Address>
+    <College>Engineering</College>
+  </Student>
+</Students>

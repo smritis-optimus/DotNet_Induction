@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web;
-
+using System.Xml;
 namespace Assignment24
 {
     public partial class ViewXml : System.Web.UI.Page
@@ -14,9 +14,7 @@ namespace Assignment24
             Response.ContentType = "application/xml";
             Response.WriteFile(Server.MapPath("~/Training.xml"));
             Response.Flush();
-            Response.End();
-
-            
+            Response.End();      
         }
     }
 }
