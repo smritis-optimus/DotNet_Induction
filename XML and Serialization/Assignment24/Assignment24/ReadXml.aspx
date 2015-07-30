@@ -8,16 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div align="centre">
-
-            <a href="ViewXml.aspx">Go to xml page</a>
-            <br />
-
-            <br />
-        </div>
+        
         <div>
-        <iframe id="DisplayXml" runat="server" href="Training.xml"></iframe>
-        </div>
+          <iframe style="margin-left: 341px" id="XmlFrame" runat="server" src="ViewXml.aspx"></iframe></div>
         <div>
             <table align="center">
                 <tr>

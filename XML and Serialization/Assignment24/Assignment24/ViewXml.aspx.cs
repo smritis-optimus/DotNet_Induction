@@ -7,14 +7,13 @@ namespace Assignment24
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Clear();
-            Response.Buffer = true;
-            Response.Charset = "";
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            Response.ContentType = "application/xml";
-            Response.WriteFile(Server.MapPath("~/Training.xml"));
-            Response.Flush();
-            Response.End();      
+            String Temp;
+            XmlDocument doc=new XmlDocument();
+            doc.Load(Server.MapPath("~/Training.xml"));
+            Temp = doc.InnerXml;
+            Temp = Temp.Replace("<", "<br />&lt;");
+            Temp = Temp.Replace(">", "&gt;<br />");
+            Response.Write(Temp);      
         }
     }
 }
