@@ -8,10 +8,10 @@ namespace Assignment25
         protected void Page_Load(object sender, EventArgs e)
         {
         }
-        public void ddlStudents_SelectedIndexChanged(Object sender, EventArgs e)
+        public void DdlStudentsSSelectedIndexChanged(Object sender, EventArgs e)
         {
             //select an option to view the student list  from dropdown menu
-            int choiceOfStudentList = Convert.ToInt32(ddlStudents.SelectedItem.Value);
+            int choiceOfStudentList = Convert.ToInt32(DdlStudents.SelectedItem.Value);
             string pathofXml = "C:\\student.xml";
             XDocument xDoc = XDocument.Load(pathofXml);
             //creating a list of students
@@ -31,19 +31,26 @@ namespace Assignment25
                     branch = record.Element("Branch").Value;
                     if (branch.Equals("MCA"))
                     {
-                        newStudent.RollNo = Convert.ToInt32(record.Element("RollNo").Value);
-                        newStudent.Name = record.Element("Name").Value;
-                        newStudent.Gender = Convert.ToChar(record.Element("Gender").Value);
-                        newStudent.Age = Convert.ToInt32(record.Element("Age").Value);
-                        newStudent.Grade = Convert.ToChar(record.Element("Grade").Value);
-                        newStudent.Branch = record.Element("Branch").Value;
-                        students.Add(newStudent);
+                        try
+                        {
+                            newStudent.RollNo = Convert.ToInt32(record.Element("RollNo").Value);
+                            newStudent.Name = record.Element("Name").Value;
+                            newStudent.Gender = Convert.ToChar(record.Element("Gender").Value);
+                            newStudent.Age = Convert.ToInt32(record.Element("Age").Value);
+                            newStudent.Grade = Convert.ToChar(record.Element("Grade").Value);
+                            newStudent.Branch = record.Element("Branch").Value;
+                            students.Add(newStudent);
+                        }
+                        catch (FormatException e)
+                        {
+                            Response.Write("<script>alert('Format conversion error')</script>");
+                        }
                     }
                    
                 }
                 //bind the list into gridview
-                grd_Students.DataSource = students;
-                grd_Students.DataBind();
+                GrdStudents.DataSource = students;
+                GrdStudents.DataBind();
             }
             //if choice is grade D then make a list of those students
             if (choiceOfStudentList == 2)
@@ -65,8 +72,8 @@ namespace Assignment25
                     }  
                 }
                 //bind the list into gridview
-                grd_Students.DataSource = students;
-                grd_Students.DataBind();
+                GrdStudents.DataSource = students;
+                GrdStudents.DataBind();
             }
         }
     }

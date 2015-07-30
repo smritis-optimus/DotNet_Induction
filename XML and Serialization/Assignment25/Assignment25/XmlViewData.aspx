@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div align="center">
-    <asp:DropDownList ID="ddlStudents" runat="server" onSelectedIndexChanged="ddlStudents_SelectedIndexChanged" AutoPostBack="true">
+    <asp:DropDownList ID="DdlStudents" runat="server" onSelectedIndexChanged="DdlStudentsSelectedIndexChanged" AutoPostBack="true">
         <asp:ListItem ID="Select" Value="0" runat="server">--Select--</asp:ListItem>
         <asp:ListItem ID="Branch" Value="1" runat="server">Students of MCA Branch</asp:ListItem>
         <asp:ListItem ID="Grade" Value="2" runat="server">Students of Grade D</asp:ListItem>
@@ -17,7 +17,7 @@
         <br />
     </div>
         <div align="center">
-            <asp:GridView ID="grd_Students" runat="server"></asp:GridView>
+            <asp:GridView ID="GrdStudents" runat="server"></asp:GridView>
         </div>
     </form>
 </body>
