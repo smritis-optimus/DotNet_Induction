@@ -16,6 +16,9 @@
             <br />
         </div>
         <div>
+        <iframe id="DisplayXml" runat="server" href="Training.xml"></iframe>
+        </div>
+        <div>
             <table align="center">
                 <tr>
                     <td>

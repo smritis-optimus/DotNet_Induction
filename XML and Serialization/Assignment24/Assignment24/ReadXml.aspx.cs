@@ -11,7 +11,9 @@ namespace Assignment24
         protected void Page_Load(object sender, EventArgs e)
         {
         }
-
+        //<summary>
+        //method for adding a node Assignment
+        //</summary>
         protected void btnAddNode_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -25,16 +27,19 @@ namespace Assignment24
             root.AppendChild(element);
             doc.Save(path);
         }
-
+        //<summary>
+        //method for displaying the first child
+        //</summary>
         protected void btnFirstChild_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
             doc.Load(path);
             XmlNode root = doc.DocumentElement;
-            XmlNode node = root.FirstChild;
-            txtFirstChild.Text = node.ToString();
+            txtFirstChild.Text = root.FirstChild.Name;
         }
-
+        //<summary>
+        //method for inserting a node Testing before Training
+        //</summary>
         protected void btnInsertBefore_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -52,7 +57,9 @@ namespace Assignment24
             doc.Save(path);
 
         }
-
+        //<summary>
+        //method for removing Assignment node
+        //</summary>
         protected void btnRemoveNode_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -68,7 +75,9 @@ namespace Assignment24
             }
             doc.Save(path);
         }
-
+        //<summary>
+        //method for displaying the child nodes
+        //</summary>
         protected void btnChildNode_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -88,7 +97,9 @@ namespace Assignment24
             txtChildNodes.Text = childNodes.ToString();
 
         }
-
+        //<summary>
+        //method for counting all the nodes
+        //</summary>
         protected void btnTotalNode_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
@@ -108,7 +119,9 @@ namespace Assignment24
             }
            txtCountNodes.Text = Convert.ToString(count);
         }
-
+        //<summary>
+        //method for replacing Testing node with testing over
+        //</summary>
         protected void btnReplaceChild_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
