@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Question.css" rel="stylesheet" />
+    <script src="Question.js"></script>
+</head>
+<body>
+    <form name="Form" action="Question2.html" onsubmit="return SelectAnswer()">
+        <div>  
+            <div class="styleQuestion">
+                Question 1: I know what is expected of me.
+            </div>
+            <div class="sytleInstruction">
+                Please indicate your level of agreement with the following statements about your company/job.
+            </div>
+            <div>
+                <div class="styleOption" id="dvOption1" onclick="CheckCommon(cbOption1,dvOption1)">
+                    <input type="checkbox" id="cbOption1" value="1" onclick="CheckCommon(cbOption1,dvOption1)" />
+                    Agree Strongly
+                </div>
+                <div class="styleOption" id="dvOption2" onclick="CheckCommon(cbOption2,dvOption2)">
+                    <input type="checkbox" id="cbOption2" value="2" onclick="CheckCommon(cbOption2,dvOption2)"/>
+                    Agree Somewhat
+                </div>
+                <div class="styleOption" id="dvOption3" onclick="CheckExclusive(cbOption3,dvOption3)">
+                    <input type="checkbox" id="cbOption3" value="3" onclick="CheckExclusive(cbOption3,dvOption3)"/>
+                    Disagree Somewhat
+                </div>
+                <div class="styleOption" id="dvOption4" onclick="CheckCommon(cbOption4,dvOption4)">
+                    <input type="checkbox" id="cbOption4" value="4" onclick="CheckCommon(cbOption4,dvOption4)"/>
+                    Disagree Strongly
+                </div>
+                <div class="styleBtn">
+                    Next&nbsp;
+                        <input type="image" src="Image/next.png" alt="submit" class="image"/>
+                    </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
