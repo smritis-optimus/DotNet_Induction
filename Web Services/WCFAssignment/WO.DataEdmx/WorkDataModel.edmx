@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WorkDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="WorkDataModelStoreContainer">
+          <EntitySet Name="Operation" EntityType="WorkDataModel.Store.Operation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WorkOrder" EntityType="WorkDataModel.Store.WorkOrder" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Operation__WONum__3C69FB99" Association="WorkDataModel.Store.FK__Operation__WONum__3C69FB99">
+            <End Role="WorkOrder" EntitySet="WorkOrder" />
+            <End Role="Operation" EntitySet="Operation" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Operation">
+          <Key>
+            <PropertyRef Name="OpID" />
+          </Key>
+          <Property Name="OpID" Type="int" Nullable="false" />
+          <Property Name="OpDesc" Type="varchar" MaxLength="20" />
+          <Property Name="OpenStatus" Type="varchar" MaxLength="20" />
+          <Property Name="OpCompletionDate" Type="datetime" />
+          <Property Name="WONumber" Type="int" />
+        </EntityType>
+        <EntityType Name="WorkOrder">
+          <Key>
+            <PropertyRef Name="WONumber" />
+          </Key>
+          <Property Name="WONumber" Type="int" Nullable="false" />
+          <Property Name="WOShortText" Type="varchar" MaxLength="20" />
+          <Property Name="WOLongText" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Operation__WONum__3C69FB99">
+          <End Role="WorkOrder" Type="WorkDataModel.Store.WorkOrder" Multiplicity="0..1" />
+          <End Role="Operation" Type="WorkDataModel.Store.Operation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkOrder">
+              <PropertyRef Name="WONumber" />
+            </Principal>
+            <Dependent Role="Operation">
+              <PropertyRef Name="WONumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WorkDataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="WorkDataEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Operations" EntityType="WorkDataModel.Operation" />
+          <EntitySet Name="WorkOrders" EntityType="WorkDataModel.WorkOrder" />
+          <AssociationSet Name="FK__Operation__WONum__3C69FB99" Association="WorkDataModel.FK__Operation__WONum__3C69FB99">
+            <End Role="WorkOrder" EntitySet="WorkOrders" />
+            <End Role="Operation" EntitySet="Operations" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Operation">
+          <Key>
+            <PropertyRef Name="OpID" />
+          </Key>
+          <Property Name="OpID" Type="Int32" Nullable="false" />
+          <Property Name="OpDesc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OpenStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OpCompletionDate" Type="DateTime" Precision="3" />
+          <Property Name="WONumber" Type="Int32" />
+          <NavigationProperty Name="WorkOrder" Relationship="WorkDataModel.FK__Operation__WONum__3C69FB99" FromRole="Operation" ToRole="WorkOrder" />
+        </EntityType>
+        <EntityType Name="WorkOrder">
+          <Key>
+            <PropertyRef Name="WONumber" />
+          </Key>
+          <Property Name="WONumber" Type="Int32" Nullable="false" />
+          <Property Name="WOShortText" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="WOLongText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Operations" Relationship="WorkDataModel.FK__Operation__WONum__3C69FB99" FromRole="WorkOrder" ToRole="Operation" />
+        </EntityType>
+        <Association Name="FK__Operation__WONum__3C69FB99">
+          <End Role="WorkOrder" Type="WorkDataModel.WorkOrder" Multiplicity="0..1" />
+          <End Role="Operation" Type="WorkDataModel.Operation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorkOrder">
+              <PropertyRef Name="WONumber" />
+            </Principal>
+            <Dependent Role="Operation">
+              <PropertyRef Name="WONumber" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WorkDataModelStoreContainer" CdmEntityContainer="WorkDataEntities">
+          <EntitySetMapping Name="Operations">
+            <EntityTypeMapping TypeName="WorkDataModel.Operation">
+              <MappingFragment StoreEntitySet="Operation">
+                <ScalarProperty Name="OpID" ColumnName="OpID" />
+                <ScalarProperty Name="OpDesc" ColumnName="OpDesc" />
+                <ScalarProperty Name="OpenStatus" ColumnName="OpenStatus" />
+                <ScalarProperty Name="OpCompletionDate" ColumnName="OpCompletionDate" />
+                <ScalarProperty Name="WONumber" ColumnName="WONumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkOrders">
+            <EntityTypeMapping TypeName="WorkDataModel.WorkOrder">
+              <MappingFragment StoreEntitySet="WorkOrder">
+                <ScalarProperty Name="WONumber" ColumnName="WONumber" />
+                <ScalarProperty Name="WOShortText" ColumnName="WOShortText" />
+                <ScalarProperty Name="WOLongText" ColumnName="WOLongText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
