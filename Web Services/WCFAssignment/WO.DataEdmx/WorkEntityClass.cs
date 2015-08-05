@@ -25,7 +25,7 @@ namespace WO.DataEdmx
                     if (operations.OpStatus == "Open")//if status is open set null to OnCompleteeDate
                        operation.OpCompletionDate = null;
                     else
-                      operation.OpCompletionDate = Convert.ToDateTime(operations.OpCompletionDate);
+                      operation.OpCompletionDate = operations.OpCompletionDate;
                     operation.WONumber = workOrder.WONumber;
                     using (WorkDataEntities db = new WorkDataEntities())
                     {
@@ -73,7 +73,7 @@ namespace WO.DataEdmx
                         if (operations.OpStatus != null)
                             queryOperation.OpStatus = operations.OpStatus;
                         if (operations.OpCompletionDate != null)
-                            queryOperation.OpCompletionDate = Convert.ToDateTime(operations.OpCompletionDate);
+                            queryOperation.OpCompletionDate = operations.OpCompletionDate;
                     }
                     updateWork.SaveChanges();
                 }
