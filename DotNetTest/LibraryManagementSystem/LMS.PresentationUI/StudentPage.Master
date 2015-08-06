@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentPage.master.cs" Inherits="LMS.PresentationUI.StudentPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <asp:Label ID="lblUserName" runat="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium" />
+            <asp:Button ID="logout" runat="server" Text="Logout" OnClick="Logout_Click" />
+        <asp:Table ID="Table1" runat="server">
+                <asp:TableRow>
+                    <asp:TableCell>
+                         <a href="UpdateAccount.aspx">
+                        <asp:Label ID="lblUpdateAccount" runat="server" Text="Update Your Account" /></a>
+                    </asp:TableCell>
+                     <asp:TableCell>
+                           <a href="ViewBooks.aspx">
+                        <asp:Label ID="lblViewBooks" runat="server" Text="View Books" /></a>
+                    </asp:TableCell>
+                     <asp:TableCell>
+                            <a href="IssueHistory.aspx">
+                        <asp:Label ID="lblIssueHistory" runat="server" Text="Issue History" /></a>
+                    </asp:TableCell>
+                    </asp:TableRow>
+            </asp:Table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
