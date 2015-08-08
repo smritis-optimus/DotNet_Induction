@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPage.master.cs" Inherits="LMS.PresentationUI.AdminPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="lblUserName" runat="server" Font-Bold="True" ForeColor="#CC3300" Font-Size="Medium" />
+            <asp:Button ID="logout" runat="server" Text="Logout" OnClick="Logout_Click" style="float:right" />
+            <asp:Table runat="server">
+                <asp:TableRow>
+                    <asp:TableCell>
+                         <a href="StudentsDetails.aspx">
+                        <asp:Label ID="lblStudentDetails" runat="server" Text="StudentDetails" /></a>
+                    </asp:TableCell>
+                     <asp:TableCell>
+                           <a href="BooksDetails.aspx">
+                        <asp:Label ID="lblBooksDetails" runat="server" Text="BooksDetails" /></a>
+                    </asp:TableCell>
+                     <asp:TableCell>
+                           <a href="IssueHistoryOfAllStudentsType1.aspx">
+                        <asp:Label ID="lblIssueHistory" runat="server" Text="IssueHistory" /></a>
+                    </asp:TableCell>
+                     <asp:TableCell>
+                            <a href="IssueBooks.aspx">
+                        <asp:Label ID="lblIssueBooks" runat="server" Text="IssueBooks" /></a>
+                    </asp:TableCell>
+                     <asp:TableCell>
+                           <a href="WithdrawBooks.aspx">
+                        <asp:Label ID="lblWithdrawBooks" runat="server" Text="WithdrawBooks" /></a>
+                    </asp:TableCell>
+                    </asp:TableRow>
+            </asp:Table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
