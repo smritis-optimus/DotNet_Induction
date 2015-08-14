@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.PresentationUI", "LMS.PresentationUI\LMS.PresentationUI.csproj", "{6548D887-F713-4867-BCBA-6778ED9E1F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.BusinessLogic", "LMS.BusinessLogic\LMS.BusinessLogic.csproj", "{B0588ECE-61B9-4652-98FF-CDAC66BCF82F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMS.DataAccess", "LMS.DataAccess\LMS.DataAccess.csproj", "{185F1E61-8F55-41F1-BBE2-49D00CCF05FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6548D887-F713-4867-BCBA-6778ED9E1F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6548D887-F713-4867-BCBA-6778ED9E1F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6548D887-F713-4867-BCBA-6778ED9E1F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6548D887-F713-4867-BCBA-6778ED9E1F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0588ECE-61B9-4652-98FF-CDAC66BCF82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0588ECE-61B9-4652-98FF-CDAC66BCF82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0588ECE-61B9-4652-98FF-CDAC66BCF82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0588ECE-61B9-4652-98FF-CDAC66BCF82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185F1E61-8F55-41F1-BBE2-49D00CCF05FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185F1E61-8F55-41F1-BBE2-49D00CCF05FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185F1E61-8F55-41F1-BBE2-49D00CCF05FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185F1E61-8F55-41F1-BBE2-49D00CCF05FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
